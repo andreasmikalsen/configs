@@ -33,5 +33,3 @@ Change the absolute path to zig-cc and zig-cxx in `nvim/lua/config.lua`
 ## Setup junctions on windows
 
 - Run `./setup.ps1`
-
-test
