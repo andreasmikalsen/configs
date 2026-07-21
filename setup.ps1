@@ -1,10 +1,12 @@
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-$nvimSource = Join-Path $repoRoot "nvim"
-$nuSource   = Join-Path $repoRoot "nushell"
+$nvimSource   = Join-Path $repoRoot "nvim"
+$nuSource     = Join-Path $repoRoot "nushell"
+$ghDashSource = Join-Path $repoRoot "gh-dash"
 
-$nvimTarget = Join-Path $env:LOCALAPPDATA "nvim"
-$nuTarget   = Join-Path $env:APPDATA "nushell"
+$nvimTarget   = Join-Path $env:LOCALAPPDATA "nvim"
+$nuTarget     = Join-Path $env:APPDATA "nushell"
+$ghDashTarget = "~/.config/gh-dash"
 
 function Create-Junction {
     param(
@@ -33,6 +35,7 @@ function Create-Junction {
 
 Create-Junction $nvimTarget $nvimSource
 Create-Junction $nuTarget $nuSource
+Create-Junction $ghDashTarget $ghDashSource
 
 Write-Host ""
 Write-Host "Done!"

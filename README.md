@@ -30,6 +30,17 @@ Change the absolute path to zig-cc and zig-cxx in `nvim/lua/config.lua`
 
 `winget install nushell --scope machine`
 
+## Install gh-dash
+
+### Install gh cli
+
+`winget install --id GitHub.cli --source winget`
+
+### Install gh-dash extension
+
+`gh extension install dlvhdr/gh-dash`
+
+Install [Zellij](https://zellij.dev/)
 ## Setup junctions on windows
 
 - Run `./setup.ps1`

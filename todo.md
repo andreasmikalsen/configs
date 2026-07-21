@@ -1,3 +1,1 @@
-- [Zellij](https://zellij.dev/)
-- [gh-dash](https://www.gh-dash.dev/)
 - [atuin](https://atuin.sh/)
