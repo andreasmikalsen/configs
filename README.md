@@ -54,3 +54,4 @@ Install [Zellij](https://zellij.dev/)
 ## Setup junctions on windows
 
 - Run `./setup.ps1`
+
