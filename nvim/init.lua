@@ -142,6 +142,7 @@ setmap({ "i", "jk", "<ESC>", { desc = "Go to normal mode" } })
 
 setmap({ "n", "<C-d>", "<C-d>zz" })
 setmap({ "n", "<C-u>", "<C-u>zz" })
+setmap({ "n", "<leader>a", cmd "qa", { desc = "Quit all"} })
 
 -- Diagnostic Config. See `:help vim.diagnostic.Opts`
 nvim.diagnostic.config({

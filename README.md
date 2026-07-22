@@ -30,6 +30,7 @@ Change the absolute path to zig-cc and zig-cxx in `nvim/lua/config.lua`
 
 `winget install nushell --scope machine`
 
+
 ## Install gh-dash
 
 ### Install gh cli
@@ -48,9 +49,14 @@ git clone https://github.com/dlvhdr/diffnav.git
 cd diffnav
 go install .
 
-winget install dandavison.delta
+winget nstall dandavison.delta
 ```
+
 ## Setup junctions on windows
 
-- Run `./setup.ps1`
+ Run `./setup.ps1`
 
+## TODOs
+
+- [WezTerm](https://wezterm.org/)
+- [zellij](https://zellij.dev/)
