@@ -278,6 +278,7 @@ addplugin({
 			{ "<leader>s", group = "[S]earch", mode = { "n", "v" } },
 			{ "<leader>t", group = "[T]oggle" },
 			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } }, -- Enable gitsigns recommended keymaps first
+			{ "<leader>o", group = "[O]cto GitHub", mode = { "n", "v" } },
 			{ "<leader>n", group = "[N]ew", mode = { "n", "v" } },
 			{ "gr", group = "LSP Actions", mode = { "n" } },
 		},
@@ -813,6 +814,46 @@ addplugin({ "windwp/nvim-autopairs", event = "InsertEnter", config = true })
 addplugin({ "sindrets/diffview.nvim" })
 
 addplugin({ "OXY2DEV/markview.nvim", lazy = false, opts = {} })
+
+addplugin({
+	"pwntester/octo.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+	opts = {
+		picker = "telescope",
+		enable_builtin = true,
+	},
+	keys = {
+		{
+			"<leader>oi",
+			"<CMD>Octo issue list<CR>",
+			desc = "List GitHub Issues",
+		},
+		{
+			"<leader>op",
+			"<CMD>Octo pr list<CR>",
+			desc = "List GitHub PullRequests",
+		},
+		{
+			"<leader>od",
+			"<CMD>Octo discussion list<CR>",
+			desc = "List GitHub Discussions",
+		},
+		{
+			"<leader>on",
+			"<CMD>Octo notification list<CR>",
+			desc = "List GitHub Notifications",
+		},
+		{
+			"<leader>os",
+			function()
+				require("octo.utils").create_base_search_command({ include_current_repo = true })
+			end,
+			desc = "Search GitHub",
+		},
+	},
+})
 
 -- import extra config if it exists
 local ok, extra = pcall(require, "extra")

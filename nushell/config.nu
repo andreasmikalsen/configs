@@ -3,3 +3,4 @@ $env.STARSHIP_CONFIG = ($nu.default-config-dir | path join ".." "starship" "star
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 alias gd = gh dash
+source ./nu_scripts/git-completion.nu
