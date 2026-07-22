@@ -50,7 +50,6 @@ go install .
 
 winget install dandavison.delta
 ```
-Install [Zellij](https://zellij.dev/)
 ## Setup junctions on windows
 
 - Run `./setup.ps1`
