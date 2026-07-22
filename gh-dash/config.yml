@@ -98,6 +98,6 @@ theme:
       compact: true
 pager:
   diff: "diffnav"
-confirmQuit: true
+confirmQuit: false
 showAuthorIcons: true
 smartFilteringAtLaunch: true
